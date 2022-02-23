@@ -21,7 +21,7 @@ WORKDIR "$ROOT_DIR"
 
 # Copy files into expected location
 COPY . "$PACKET_FORWARDER_INPUT_DIR"
-COPY --from=nebraltd/lora_gateway:3a181a50b5b29757200d0f9b0d6cfef22db613b7 "$LORA_GATEWAY_OUTPUT_DIR" "$LORA_GATEWAY_INPUT_DIR"
+COPY --from=nebraltd/lora_gateway:7793c1ccc7cb6409bfa4e9128f5e5cc70c81e581 "$LORA_GATEWAY_OUTPUT_DIR" "$LORA_GATEWAY_INPUT_DIR"
 
 # Compile lora_pkt_fwd for all buses
 RUN . "$PACKET_FORWARDER_INPUT_DIR/compile_lora_pkt_fwd.sh"
